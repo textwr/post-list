@@ -31,6 +31,13 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 
       div1.textContent = e.title;
       div2.textContent = e.body;
+      article.setAttribute("id", e.id);
+
+      article.addEventListener("click", function (e) {
+        if (e.target.id != undefined) {
+          window.location.href = `file:///D:/code/0809/%EA%B3%BC%EC%A0%9C2/test.html?id=${e.target.id}`;
+        }
+      });
 
       article.appendChild(div1);
       article.appendChild(div2);
